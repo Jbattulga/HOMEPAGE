@@ -11,9 +11,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     </head>
     <body>
-
 
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
@@ -30,32 +33,44 @@
     <!-- GOOGLE SEARCH -->
          <form action="https://google.com/search" method="get" target="_blank">
          <input type="hidden" name="sitesearch" />
-          <input type="text" name="q" placeholder="search..." class="search-bar"/>
-          <input type="submit" value="GO" class="submit-button">
+         <input type="text" name="q" placeholder="search..." class="search-bar"/>
+         <input type="submit" value="GO" class="submit-button">
  </form>
 
  <!-- BOOKMARK -->
  <section class="bookmarks"
- <a href="https://classroom.google.com" target="_blank">
+ <a href="http://mail.google.com" target="_blank">
     <i class="fas fa-envelope"></i>
 </a>
-<a href="https://classroom.google.com" target="_blank">
+
 
 </a>
+<a href="https://open.spotify.com/" target="_blank">
+    <i class="fab fa-spotify"></i>
+</a>
 
+<!-- Icon for sticky note -->
 <i class="fas fa-sticky-note" onclick="showNote()"></i>
+<!-- Icon for calculator -->
 <i class="fas fa-calculator" onclick="showCalculator()"></i>
-
 </section>
 
 <!-- CALCULATOR -->
-<iframe class="calculator hover" id="calc" width="219" height="302" src="https://calculator-1.com/outdoor/?f=ffca39&r=ffffff" scrolling="no" frameborder="0"></iframe>
-    
-        
+<div id="calculator" class="calculator-container">
+    <iframe class="calculator hover" id="calc" width="219" height="302" src="https://calculator-1.com/outdoor/?f=ffca39&r=ffffff" scrolling="no" frameborder="0"></iframe>
+</div>
 
 <!-- POST IT NOTE -->   
-<textarea placeholder="Write a note..." id="note" class="" onkeyup="autoSave()">
-</textarea>
+<div id="sticky-note" class="sticky-note-container">
+    <textarea placeholder="Write a note..." id="note" class="" onkeyup="autoSave()">
+    </textarea>
+</div>
+
+
+<div class="spotify-wrapper" id="music">
+    <i class="far fa-times-circle exit" onclick="Spotify()"></i>
+    <a class="spotify-playlist" href="https://open.spotify.com/playlist/2zG1yhHVdw120ZhNBCbnBf"></a>
+</div>
 
 <div id="clock"></div>
 
