@@ -58,3 +58,13 @@ function showNote(){
     }
  }
 
+ // Gmail bookmark element
+var gmailBookmark = document.querySelector('.fa-envelope');
+
+gmailBookmark.addEventListener('click', function(event) {
+    
+    event.preventDefault();
+
+    window.open('http://mail.google.com', '_blank');
+});
+
